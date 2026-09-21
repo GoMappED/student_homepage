@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1015" />
+    <title>GoMappED — Your IELTS journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <div id="city" class="city" aria-hidden="true"></div>
+      <div class="shade" aria-hidden="true"></div>
+      <header class="topbar">
+        <time id="today-label"></time>
+        <div id="calendar" class="calendar" aria-label="Practice calendar"></div>
+        <p id="target-label"></p>
+      </header>
+      <section id="arrival" class="arrival">
+        <h1>Ready to practise?</h1>
+        <p>Your IELTS journey starts here.</p>
+      </section>
+      <section id="scenes" class="scenes" aria-label="Today's IELTS practice"></section>
+      <aside id="return-hook" class="return-hook" hidden>🕯️ <strong>Day 1</strong><br />Come back tomorrow to keep<br />your flower growing.</aside>
+      <div id="login-hook" class="login-hook" hidden>
+        <strong>Your flower just started growing.</strong>
+        <p>Log in to make sure it's here<br />when you come back tomorrow.</p>
+        <a href="/weclass/ai/register">Save my progress →</a>
+      </div>
+      <button id="flower" class="flower" aria-label="Show score details">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <g class="outlines"><path d="M60 60 Q45 40 60 15 Q75 40 60 60Z"/><path d="M60 60 Q80 45 105 60 Q80 75 60 60Z"/><path d="M60 60 Q45 80 60 105 Q75 80 60 60Z"/><path d="M60 60 Q40 45 15 60 Q40 75 60 60Z"/></g>
+          <g id="petals"></g><circle cx="60" cy="60" r="15" fill="white"/><text id="overall-score" x="60" y="57" text-anchor="middle"></text><text id="target-score" x="60" y="68" text-anchor="middle"></text>
+        </svg>
+      </button>
+      <section id="flower-panel" class="flower-panel" hidden></section>
+      <div id="modal-wrap" class="modal-wrap" hidden><section class="onboarding" role="dialog" aria-modal="true" aria-labelledby="onboard-title"><h2 id="onboard-title">What score are you working towards?</h2><div id="score-options" class="score-options"></div><div id="date-step" hidden><h3>When is your exam?</h3><input id="exam-date" type="date" /><button id="start-button">Let’s go →</button></div></section></div>
+    </main>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
