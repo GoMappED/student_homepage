@@ -40,3 +40,4 @@
 
 /* A local file preview always has a visible village; video replaces it once playing. */
 .village-poster,.village-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.village-poster{z-index:1;opacity:1;transition:opacity .35s ease}.village-poster.hidden{opacity:0}.village-image{z-index:2}
+
